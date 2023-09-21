@@ -123,3 +123,66 @@ if __name__ == "__main__":
 
     # Élimination d'un personnage
     joueur1.eliminer_personnage_par_pseudo("Mage 1")
+"""
+-------------------------------------
+|         Class Guerrier           |
+-------------------------------------
+| - pseudo: str                     |
+| - niveau: int                     |
+| - points_de_vie: int              |
+| - initiative: int                 |
+-------------------------------------
+| + __init__(pseudo: str, niveau: int)|
+| + attaque(autre_personnage: Personnage)|
+| + combat(autre_personnage: Personnage) |
+| + degats(): int                   |
+-------------------------------------
+
+-------------------------------------
+|           Class Mage             |
+-------------------------------------
+| - pseudo: str                     |
+| - niveau: int                     |
+| - points_de_vie: int              |
+| - initiative: int                 |
+| - mana: int                       |
+-------------------------------------
+| + __init__(pseudo: str, niveau: int)|
+| + attaque(autre_personnage: Personnage)|
+| + combat(autre_personnage: Personnage) |
+| + soigner()                        |
+| + degats(): int                   |
+-------------------------------------
+
+
+-------------------------------------
+|         Class Joueur             |
+-------------------------------------
+| - nom: str                        |
+| - nombre_max_personnages: int     |
+| - personnages: List[Personnage]   |
+-------------------------------------
+| + __init__(nom: str, nombre_max_personnages: int) |
+| + ajouter_personnage(personnage: Personnage)     |
+| + get_personnage_par_numero(numero: int): Personnage |
+| + get_personnage_par_pseudo(pseudo: str): Personnage |
+| + eliminer_personnage_par_numero(numero: int)    |
+| + eliminer_personnage_par_pseudo(pseudo: str)    |
+-------------------------------------
+
+
+-------------------------------------
+|         Class Personnage         |
+-------------------------------------
+| - pseudo: str                     |
+| - niveau: int                     |
+| - points_de_vie: int              |
+| - initiative: int                 |
+-------------------------------------
+| + __init__(pseudo: str, niveau: int)|
+| + attaque(autre_personnage: Personnage)|
+| + combat(autre_personnage: Personnage) |
+| + soigner()                        |
+| + degats(): int                   |
+-------------------------------------
+"""
