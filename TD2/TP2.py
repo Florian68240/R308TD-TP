@@ -132,10 +132,10 @@ if __name__ == "__main__":
 | - points_de_vie: int              |
 | - initiative: int                 |
 -------------------------------------
-| + __init__(pseudo: str, niveau: int)|
-| + attaque(autre_personnage: Personnage)|
-| + combat(autre_personnage: Personnage) |
-| + degats(): int                   |
+| + Guerrier(ps : String):|
+| + Guerrier(ps : String, niveau: Int) :|
+| + soin():                         |
+| + degats(): Int                   |
 -------------------------------------
 
 -------------------------------------
@@ -147,11 +147,10 @@ if __name__ == "__main__":
 | - initiative: int                 |
 | - mana: int                       |
 -------------------------------------
-| + __init__(pseudo: str, niveau: int)|
-| + attaque(autre_personnage: Personnage)|
-| + combat(autre_personnage: Personnage) |
-| + soigner()                        |
-| + degats(): int                   |
+| + Mage(ps :String):               |
+| + Mage(ps :String), niveau: Int) :|
+| + soin():                         |
+| + degats(): Int                   |
 -------------------------------------
 
 
@@ -159,15 +158,20 @@ if __name__ == "__main__":
 |         Class Joueur             |
 -------------------------------------
 | - nom: str                        |
-| - nombre_max_personnages: int     |
+| - liste_personnages: Personnage[] |
 | - personnages: List[Personnage]   |
 -------------------------------------
-| + __init__(nom: str, nombre_max_personnages: int) |
-| + ajouter_personnage(personnage: Personnage)     |
-| + get_personnage_par_numero(numero: int): Personnage |
-| + get_personnage_par_pseudo(pseudo: str): Personnage |
-| + eliminer_personnage_par_numero(numero: int)    |
-| + eliminer_personnage_par_pseudo(pseudo: str)    |
+| + Joueur(nom: String):      |
+| + Joueur(nom: String, maximum : Int):
+| + Joueur(nom: String, liste_p : Personnage[]) |
+| + Joueur(nom: String, liste_p : Personnage[], maximum : Int
+| + ajouter_Personnage(p: Personnage ):     |
+| + rechercher_Personnage(Id: Int): Personnage |
+| + rechercher_Personnage(p:Personnage): Personnage 
+| + rechercher_Personnage(nom : String): Personnage  |
+| + effacer_Personnage(id: int)    |
+| + effacer_Personnage(nom : String)      |
+| + effacer_Personnage(p : Personnage):    |
 -------------------------------------
 
 
@@ -179,10 +183,11 @@ if __name__ == "__main__":
 | - points_de_vie: int              |
 | - initiative: int                 |
 -------------------------------------
-| + __init__(pseudo: str, niveau: int)|
-| + attaque(autre_personnage: Personnage)|
-| + combat(autre_personnage: Personnage) |
+| + Personnage(ps : string)          |
+| + Personnage(ps : string), niveau : Int): |
+| + attaque(opposant: Personnage)    |
+| + combat(opposant: Personnage)     |
 | + soigner()                        |
-| + degats(): int                   |
+| + degats(): int                    |
 -------------------------------------
 """
